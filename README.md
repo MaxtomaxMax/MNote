@@ -11,7 +11,7 @@ Prerequisites：
 Environment Setup:
 This project includes ​​two locally running MCP server​​ and ​​two remotely invoked MCP server​​. The two remote MCP servers are **​​filesystem**​​ and **​​markmap**​​. Among them, ​​filesystem​​ is a built-in MCP service in Cherry Studio and can be installed via the official documentation [tutorial](https://docs.cherry-ai.com/advanced-basic/mcp), while ​[markmap](https://github.com/jinzcdev/markmap-mcp-server/tree/main)​ requires manual integration into Cherry Studio.
 
-![](./docs/markmap1.png)
+![](./docs/setup.png)
 
 import by json format work well by testing.
 
@@ -112,6 +112,11 @@ AI模型框架：Whisper + ECAPA-TDNN
 （效果展示见 markmap 部分）
 
 ### markmap
+基于开源项目 markmap 封装构建的 MCP 服务，能够实现从 markdown 转换为思维导图，并且生成的 html 文件中可以一键导出图片为 png, jpg, svg 格式。
+
+以上 MCP 服务结合构建的个人笔记助手能够实现个人知识管理的操作，部分展示如下：
+![](./docs/markmap1.png)
+![](./docs/markmap2.png)
 
 ## 团队贡献
 队长翁啟华负责完成 MCP 服务 audio2md 的代码以及调优；队员韩宇辰负责 MCP 服务 markdown-note-taker 的开发以及 MCP 服务集成与调试
