@@ -9,7 +9,7 @@ Prerequisites：
 > Do Not Forget to setup environment path!
 
 Environment Setup:
-This project includes ​​two locally running MCP server​​ and ​​two remotely invoked MCP server​​. The two remote MCP servers are **​​filesystem**​​ and **​​markmap**​​. Among them, ​​filesystem​​ is a built-in MCP service in Cherry Studio and can be installed via the official documentation [tutorial](https://docs.cherry-ai.com/advanced-basic/mcp), while ​​[markmap]​(https://github.com/jinzcdev/markmap-mcp-server)​ requires manual integration into Cherry Studio.
+This project includes ​​two locally running MCP server​​ and ​​two remotely invoked MCP server​​. The two remote MCP servers are **​​filesystem**​​ and **​​markmap**​​. Among them, ​​filesystem​​ is a built-in MCP service in Cherry Studio and can be installed via the official documentation [tutorial](https://docs.cherry-ai.com/advanced-basic/mcp), while ​[markmap](https://github.com/jinzcdev/markmap-mcp-server/tree/main)​ requires manual integration into Cherry Studio.
 
 ![](docs\markmap1.png)
 
