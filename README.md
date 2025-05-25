@@ -11,7 +11,7 @@ Prerequisites：
 Environment Setup:
 This project includes ​​two locally running MCP server​​ and ​​two remotely invoked MCP server​​. The two remote MCP servers are **​​filesystem**​​ and **​​markmap**​​. Among them, ​​filesystem​​ is a built-in MCP service in Cherry Studio and can be installed via the official documentation [tutorial](https://docs.cherry-ai.com/advanced-basic/mcp), while ​[markmap](https://github.com/jinzcdev/markmap-mcp-server/tree/main)​ requires manual integration into Cherry Studio.
 
-![](docs\markmap1.png)
+![](./docs/markmap1.png)
 
 import by json format work well by testing.
 
@@ -96,13 +96,13 @@ AI模型框架：Whisper + ECAPA-TDNN
 使用 Whisper 模型进行语音识别，能够支持中英文混合识别，并有较高的准确率。结合 ECAPA-TDNN模型用于区别人声，将音频转换为短语音优化识别，能够区别不同人声，在会议音频和讨论音频等场景有丰富的应用潜力。
 
 效果展示：
-![](docs\audio2md1.png)
-![](docs\audio2md2.png)
+![](./docs/audio2md1.png)
+![](./docs/audio2md2.png)
 
 ### filesystem
 采用 Cherry Studio 内置的 MCP 服务，指定
 
-![alt text](docs\filesystem1.png)
+![alt text](./docs/filesystem1.png)
 
 ### markdown-note-taker:
 
