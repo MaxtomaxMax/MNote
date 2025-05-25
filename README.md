@@ -100,11 +100,16 @@ AI模型框架：Whisper + ECAPA-TDNN
 ![](./docs/audio2md2.png)
 
 ### filesystem
-采用 Cherry Studio 内置的 MCP 服务，指定
+采用 Cherry Studio 内置的 MCP 服务，指定可访问的文件路径，使得智能体能够在该路径下操作文件。
 
 ![alt text](./docs/filesystem1.png)
 
 ### markdown-note-taker:
+包含两个本地开发的 MCP 工具，均调用 Nvidia NIM 服务的 API 接口实现。通过设计专用的提示词实现智能体针对具体笔记操作的执行。其中包括：
+- markdown_summarizer：针对 markdown 格式文本的总结工具。能够对单个以及多个 markdown 文件进行总结，并生成结构化的 markdown 格式输出。当某些笔记做得比较着急，没有时间整理其结构时，该工具为这种场景提供了解决方案。
+- knowledge_map： 针对某一单一笔记内容，没办法第一时间得知该知识点在整个知识体系架构中处于什么位置，处于一种“不识庐山真面目”的情况。本工具获取笔记内容后能够生成对应的前置知识与进阶知识，并结合 markmap 工具对知识体系进行可视化，同样也有助于明确学习路径，迸发新的灵感。
+
+（效果展示见 markmap 部分）
 
 ### markmap
 
