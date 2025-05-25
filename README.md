@@ -73,9 +73,42 @@ uv pip install soundfile
 # 项目报告：基于MCP的个人笔记助手
 
 ## 项目概述
+本项目参与 Nvidia 12th Sky Hackathon 比赛，主题为实现完整功能的MCP智能体。本项目旨在打造一款基于 MCP 的个人笔记助手，该项目借助Nvidia NIM 微服务与开源 MCP 服务，完成了个人笔记助手智能体的构建。本项目结合了开源的远程 MCP 服务与本地开发调用的个人 MCP 服务，具有良好的拓展性，在借助 AI 进行个人知识管理的环境下中有较大应用潜力。
 
 ## 项目关键技术
+- **基于 Cherry Studio 的 MCP 服务集成**：本项目采用开源免费的 AI 助手平台作为 MCP 客户端开发，它是一款集多模型对话、知识库管理、AI 绘画、翻译等功能于一体的全能平台，允许用户的高度自定义设计，与传统的 MCP 客户端平台 Claude Desktop 或 Github Copilot 相比开源又免费，有更好的开发自由度和扩展潜力。 
+- **借助 MCP 工具发挥多模态交互潜力**：传统的个人知识体系构建在整合多模态信息时需要消耗大量的时间。例如整理课程视频或录音文件等，各种 MCP 工具的自由定制开发让智能体有了更强大的处理多模态信息的能力，它为多模态的个人知识体系的输入输出都赋予了强大的潜力。
+
+## 项目开发
+在有限的开发时间里（实际开发时间：5月23日至25日），本项目开发集成了4个 MCP 服务来实现个人笔记助手。这些 MCP 服务分别是：
+- filesystem: 用于文件系统操作，支持读取、写入等多种文件操作
+- audio2md: 将音频文件总结转换成 markdown 笔记文件，并保留原始文本
+- markdown-note-taker：对以 markdown 格式的笔记进行总结，生成进阶笔记，生成知识图谱等
+- markmap：将 markdown 文件或 markdown 格式的文本可视化成思维导图，可视化完成后支持一键转换为图片
+
+
+### audio2md
+音频处理工具：PyDub + FFmpeg
+
+FFmpeg作为行业标准工具链，处理可靠性高。该音频处理方案支持MP3/WAV/M4A等主流格式的相互转换，可精确设置采样率(16kHz)、声道数(单声道)等音频参数，提供基于时间窗口的音频切片功能。
+
+AI模型框架：Whisper + ECAPA-TDNN
+使用 Whisper 模型进行语音识别，能够支持中英文混合识别，并有较高的准确率。结合 ECAPA-TDNN模型用于区别人声，将音频转换为短语音优化识别，能够区别不同人声，在会议音频和讨论音频等场景有丰富的应用潜力。
+
+效果展示：
+![](docs\audio2md1.png)
+![](docs\audio2md2.png)
+
+### filesystem
+采用 Cherry Studio 内置的 MCP 服务，指定
+
+![alt text](docs\filesystem1.png)
+
+### markdown-note-taker:
+
+### markmap
 
 ## 团队贡献
+队长翁啟华负责完成 MCP 服务 audio2md 的代码以及调优；队员韩宇辰负责 MCP 服务 markdown-note-taker 的开发以及 MCP 服务集成与调试
 
 ## 未来展望
