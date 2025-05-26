@@ -5,6 +5,10 @@ from pydub import AudioSegment
 from opencc import OpenCC # 繁体转简体
 cc = OpenCC('t2s')
 
+from dotenv import load_dotenv
+load_dotenv()
+OPENAI_API = os.getenv("OPENAI_API")
+
 os.environ["PATH"] += os.pathsep + "d:\\Software\\ffmpeg\\ffmpeg-7.1.1-essentials_build\\bin"  # 替换为实际路径
 os.environ["PATH"] += os.pathsep + "d:\\nodejs"
 
@@ -142,7 +146,7 @@ async def audio2md(audio_path, language="zh", output_dir="./outputs"):
     返回:
         str: 生成的Markdown文件绝对路径
     """
-    converter = Audio2MDWhisper(openai_key="sk-3Ghmi6ByeGtD25WM0471F6174d7a4b10A916A2B38bBc372c", openai_base_url="https://vip.apiyi.com/v1")
+    converter = Audio2MDWhisper(openai_key=OPENAI_API, openai_base_url="https://vip.apiyi.com/v1")
     
     result = converter.process(audio_path, language, output_dir)
     return result

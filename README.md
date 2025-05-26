@@ -66,6 +66,13 @@ uv pip install soundfile
       ]
     },
 ```
+Two API keys are required to run this project. Create `.env` file at the root of this project:
+```
+NVIDIA_API="<your NVIDIA API for NVIDIA NIM>"
+OPENAI_API="<API from apiyi>"
+```
+Feel free to modify the corresponding API call code to your own version.
+
 > Note: this Guide is not fully test yet. ​​If you encounter any problems during the environment setup, feel free to propose issue!​ 
 
 ---
